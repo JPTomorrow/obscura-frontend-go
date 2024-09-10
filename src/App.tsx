@@ -70,9 +70,9 @@ function App() {
       : setDisableVoteButtons(false);
   }, [cookies.has_voted]);
 
-  useEffect(() => {
-    console.log(vid);
-  }, [vid]);
+  // useEffect(() => {
+  //   console.log(vid);
+  // }, [vid]);
 
   // const increaseVolume = (e: any) => {
   //   setTimeout(

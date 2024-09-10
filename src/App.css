@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  @font-face {
-    font-family: "Carnival";
-    src: local("Carnival"),
-      url(fonts/Carnevalee Freakshow.ttf) format("opentype");
-  }
-
   .carnival-font {
     font-family: "Carnival", sans-serif;
   }

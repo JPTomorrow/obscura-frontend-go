@@ -1,5 +1,6 @@
 {
   "name": "obscura-frontend",
+  "base": "",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "npx serve -p 5173"
+    "start": "npx serve ./dist -p 5173"
   },
   "dependencies": {
     "@tabler/icons-react": "^3.14.0",
