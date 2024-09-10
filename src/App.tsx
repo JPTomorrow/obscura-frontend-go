@@ -53,8 +53,9 @@ function App() {
   };
 
   const nextVideo = async () => {
+    console.log(`${location.protocol}//${location.hostname}`);
     let resp = await fetch(
-      `${location.protocol}${location.hostname}:8080/next-vid`
+      `${location.protocol}//${location.hostname}:8080/next-vid`
     );
     let data = await resp.json();
     setVid(data);
@@ -103,7 +104,7 @@ function App() {
 
   const handleVote = async (up: boolean) => {
     await fetch(
-      `${location.protocol}${location.hostname}:8080/${
+      `${location.protocol}//${location.hostname}:8080/${
         up ? "upvote" : "downvote"
       }`,
       {
@@ -124,7 +125,7 @@ function App() {
       mute: 1,
       rel: 0,
       controls: 1,
-      origin: `${location.protocol}${location.hostname}:5173`,
+      origin: `${location.protocol}//${location.hostname}:5173`,
     },
   };
   return (
