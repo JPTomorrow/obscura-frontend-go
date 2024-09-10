@@ -53,7 +53,9 @@ function App() {
   };
 
   const nextVideo = async () => {
-    let resp = await fetch(`http://${location.hostname}:8080/next-vid`);
+    let resp = await fetch(
+      `${location.protocol}${location.hostname}:8080/next-vid`
+    );
     let data = await resp.json();
     setVid(data);
     resetVote();
@@ -101,7 +103,9 @@ function App() {
 
   const handleVote = async (up: boolean) => {
     await fetch(
-      `http://${location.hostname}:8080/${up ? "upvote" : "downvote"}`,
+      `${location.protocol}${location.hostname}:8080/${
+        up ? "upvote" : "downvote"
+      }`,
       {
         method: "POST",
         headers: {
@@ -120,7 +124,7 @@ function App() {
       mute: 1,
       rel: 0,
       controls: 1,
-      origin: `http://${location.hostname}:5173`,
+      origin: `${location.protocol}${location.hostname}:5173`,
     },
   };
   return (
